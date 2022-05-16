@@ -131,7 +131,13 @@ body {
 
 .barraContactoConteiner {
   grid-area: barraContacto;
-  background-color: #ecc042;
+  background: rgb(233, 220, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(233, 220, 180, 1) 0%,
+    rgba(236, 192, 66, 1) 48%,
+    rgba(238, 208, 120, 1) 100%
+  );
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
@@ -268,6 +274,7 @@ video {
   font-weight: 400;
   font-size: 24pt;
   max-width: 386px;
+  animation: up-to-down 0.8s ease-out;
 }
 
 .parrafo {
@@ -445,6 +452,19 @@ video {
 form {
   display: flex;
   flex-direction: column;
+}
+
+/*-----------------------------Keyframes----------------------------*/
+
+@keyframes up-to-down {
+  0% {
+    transform: translateY(-30%);
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: translateY(0%);
+    color: rgba(0, 0, 0, 1);
+  }
 }
 
 /*-----------------------------Media queries----------------------------*/
